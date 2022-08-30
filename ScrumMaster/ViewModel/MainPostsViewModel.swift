@@ -15,7 +15,6 @@ import SDWebImage
 class MainPostsViewModel: ObservableObject {
     
     @Published var errorMessage = ""
-//    @Published var recentPost: RecentPost?
     @Published var scrumUser: ScrumUser?
     @Published var isUserCurrentlyLoggedOut = false
    

@@ -110,9 +110,6 @@ class ScrumLogViewModel: ObservableObject {
             print("Recipient saved message as well")
         }
     }
-    
-
-    
 
     private func persistRecentPost() {
         guard let scrumUser = scrumUser else {return}

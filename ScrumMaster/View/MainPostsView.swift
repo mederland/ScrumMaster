@@ -97,30 +97,11 @@ struct MainPostsView: View {
             ForEach(mpvm.recentPosts) { recentPost in
                 VStack{
                     Button {
-//                        let uid = FirebaseManager.shared.auth.currentUser?.uid == recentPost.fromId ?
-//                        recentPost.toId : recentPost.fromId
-//
-//                        self.scrumUser = .init(id: uid, uid: uid, email: recentPost.email, firstname: recentPost.firstname, lastname: recentPost.lastname, company: recentPost.company, profileImageUrl: recentPost.imageProfileUrl)
-//
-//                        self.scrumLogViewModel.scrumUser = self.scrumUser
                         self.scrumLogViewModel.fetchPosts()
                         self.shouldNavigateToGroupLogView.toggle()
                     } label: {
                         HStack(spacing: 8){
-
-//                            WebImage(url: URL(string: recentPost.imageProfileUrl))
-//                                .resizable()
-//                                .scaledToFill()
-//                                .frame(width: 64, height: 64)
-//                                .clipped()
-//                                .cornerRadius(64)
-//                                .overlay(RoundedRectangle(cornerRadius: 64)
-//                                    .stroke(Color.black, lineWidth: 1))
-//                                .shadow(radius: 5)
-
                             VStack(alignment: .leading){
-//                                Text(recentPost.email)
-//                                    .font(.system(size: 16, weight: .bold))
                                 Text(recentPost.text)
                                     .font(.system(size: 14, weight: .semibold))
                                     .foregroundColor(Color(.lightGray))
@@ -169,9 +150,6 @@ struct MainPostsView: View {
             ScrumMeetingView (addAllPosts: { posts in
                 print(posts)
                 self.shouldNavigateToGroupLogView.toggle()
-//                self.recentPosts = posts
-//                self.MainPostsViewModel.recentPost = posts
-//                self.MainPostsViewModel.fetchRecentPosts()
             })
         }
 
@@ -199,9 +177,6 @@ struct MainPostsView: View {
             ScrumMeetingView (addAllPosts: { posts in
                 print(posts)
                 self.shouldNavigateToGroupLogView.toggle()
-//                self.recentPosts = posts
-//                self.MainPostsViewModel.recentPost = posts
-//                self.MainPostsViewModel.fetchRecentPosts()
             })
         }
 
